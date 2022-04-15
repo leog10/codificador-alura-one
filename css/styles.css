@@ -321,12 +321,6 @@ footer {
     .header h1 {
         display: none;
     }
-}
-
-@media screen and (max-width: 430px) {
-    .header h1 {
-        display: none;
-    }
 
     body {
         padding: 10px;
