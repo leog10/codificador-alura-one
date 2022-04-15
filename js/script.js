@@ -43,7 +43,7 @@ function checkEncryptText() {
     alert("El texto debe contener solo letras minúsculas sin acentos");
     return false;
   } else {
-    encryptText(textBox);
+    return true;
   }
 }
 
@@ -71,5 +71,49 @@ function encryptText(textBox) {
   document.getElementById("notFound").style.display = "none";
   resultsArea.style.display = "block";
   resultsArea.innerHTML = `Texto Encriptado con éxito: ${textEncrypted}`;
+  copyResultButton.style.display = "block";
+}
+
+function encryptTextv2() {
+  if (!checkEncryptText()) {
+    return false;
+  }
+
+  const text = document.getElementById("textBox").value;
+  let textBoxElement = document.getElementById("textBox");
+  let textEncrypted = text;
+
+  textEncrypted = textEncrypted.replace(/e/gi, letraE);
+  textEncrypted = textEncrypted.replace(/i/gi, letraI);
+  textEncrypted = textEncrypted.replace(/a/gi, letraA);
+  textEncrypted = textEncrypted.replace(/o/gi, letraO);
+  textEncrypted = textEncrypted.replace(/u/gi, letraU);
+
+  textBoxElement.value = "";
+  document.getElementById("notFound").style.display = "none";
+  resultsArea.style.display = "block";
+  resultsArea.innerHTML = `Texto encriptado con éxito:\n\n${textEncrypted}`;
+  copyResultButton.style.display = "block";
+}
+
+function decryptText() {
+  if (!checkEncryptText()) {
+    return false;
+  }
+
+  const text = document.getElementById("textBox").value;
+  let textBoxElement = document.getElementById("textBox");
+  let textDecrypted = text;
+
+  textDecrypted = textDecrypted.replace(/enter/gi, "e");
+  textDecrypted = textDecrypted.replace(/imes/gi, "i");
+  textDecrypted = textDecrypted.replace(/ai/gi, "a");
+  textDecrypted = textDecrypted.replace(/ober/gi, "o");
+  textDecrypted = textDecrypted.replace(/ufat/gi, "u");
+
+  textBoxElement.value = "";
+  document.getElementById("notFound").style.display = "none";
+  resultsArea.style.display = "block";
+  resultsArea.innerHTML = `Texto desencriptado con éxito:\n\n${textDecrypted}`;
   copyResultButton.style.display = "block";
 }

@@ -73,7 +73,7 @@ body {
     background: white;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
-    height: 800px;
+    min-height: 800px;
     align-self: center;
 }
 
@@ -116,6 +116,7 @@ body {
     flex-grow: 1;
     margin-bottom: 10px;
     word-break: break-word;
+    white-space: pre-wrap;
     display: none;
 }
 
