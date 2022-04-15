@@ -14,7 +14,7 @@ body {
 }
 
 body {
-    padding: 40px;
+    padding: 40px 40px 0 40px;
     background: #F3F5FC;
 }
 
@@ -168,6 +168,28 @@ button {
     gap: 10px;
 }
 
+.footer_hr {
+    max-width: 1400px;
+    margin: 15px auto 0;
+    border-color: #0a3871ab;
+    border-radius: 50%;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 15px auto 0;
+    color: #7a7e81;
+    font-size: 16px;
+}
+
+.links {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
 /* Responsive */
 
 @media screen and (max-width: 1490px) {
@@ -220,10 +242,12 @@ button {
     .result_box {
         width: 550px;
         height: auto;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 430px) {
     body {
         padding: 10px;
     }
@@ -256,6 +280,16 @@ button {
     #encryptButton,
     #decryptButton {
         width: 280px;
+    }
+
+    #textBox {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    #results {
+        font-size: 18px;
+        line-height: 28px;
     }
 }
 
