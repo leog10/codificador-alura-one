@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador/Desencriptador</title>
+    <link rel="icon" href="/assets/favicon.ico" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="./js/script.js" defer></script>
+  </head>
+  <body>
+    <div><img src="./assets/logo.png" /></div>
+    <div class="container">
+      <div class="main_container">
+        <textarea name="textBox" id="textBox" cols="10" rows="10"></textarea>
+        <div class="encrypt_decrypt_container">
+          <div class="warning_container">
+            <img src="./assets/warning.png" />
+            <p class="input_warning">Sólo letras minúsculas y sin acentos</p>
+          </div>
+          <div class="encrypt_decrypt_buttons">
+            <button type="button" id="encryptButton">Encriptar</button>
+            <button type="button" id="decryptButton">Desencriptar</button>
+          </div>
+        </div>
+      </div>
+      <div class="result_box">
+        <div>
+          <p id="results">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci
+            montes, sit et diam risus scelerisque vitae est. Tortor maecenas
+            nunc ut laoreet. Eget diam mauris quam quisque ut eget fringilla sit
+            elit. Libero, sodales duis fames id diam feugiat aliquet non
+            egestas.
+          </p>
+        </div>
+        <div id="notFound">
+          <img src="./assets/find.png" alt="" />
+          <h5>Ningún mensaje fue encontrado</h5>
+          <p>Ingresa el texto que desees encriptar o desencriptar</p>
+        </div>
+        <button type="button" id="copyResultButton">Copiar</button>
+      </div>
+    </div>
+  </body>
+</html>
