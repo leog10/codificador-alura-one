@@ -47,6 +47,13 @@ function checkEncryptText() {
   }
 }
 
+/*
+Esta es la primera funcion que cree.
+
+Funciona correctamente.
+
+Se me ocurrió utlizar otro método como .replace() y me pareció una mejor implementación.
+
 function encryptText(textBox) {
   let textBoxElement = document.getElementById("textBox");
   let textEncrypted = "";
@@ -73,6 +80,7 @@ function encryptText(textBox) {
   resultsArea.innerHTML = `Texto Encriptado con éxito: ${textEncrypted}`;
   copyResultButton.style.display = "block";
 }
+*/
 
 function encryptTextv2() {
   if (!checkEncryptText()) {
