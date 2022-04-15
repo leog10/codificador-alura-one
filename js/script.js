@@ -131,7 +131,7 @@ function decryptText() {
 }
 
 function copyText() {
-  let text = document.getElementById("results").innerHTML;
-  console.log(text);
-  navigator.clipboard.write(text);
+  let text = document.getElementById("results");
+  text.select();
+  navigator.clipboard.writeText(text.innerHTML);
 }

@@ -57,7 +57,6 @@ body {
     color: #0A3871;
     border: none;
     outline: none;
-    overflow: hidden;
     resize: none;
     flex-grow: 1;
     background: transparent;
@@ -108,6 +107,9 @@ body {
 }
 
 #results {
+    cursor: auto;
+    border: none;
+    resize: none;
     text-align: left;
     font-style: normal;
     font-size: 24px;
@@ -118,6 +120,10 @@ body {
     word-break: break-word;
     white-space: pre-wrap;
     display: none;
+}
+
+#results:focus-visible {
+    outline: none;
 }
 
 button {
