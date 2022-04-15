@@ -9,21 +9,34 @@
 
 html,
 body {
-    font-family: Inter;
+    font-family: 'Inter';
     font-weight: 400;
 }
 
 body {
     padding: 40px;
-    padding-left: 84px;
-    padding-right: 84px;
     background: #F3F5FC;
 }
 
-#textBox {
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: -25px;
+}
+
+.main_container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 800px;
     margin-top: 120px;
-    margin-left: calc(100vw / 10);
-    width: calc(100vw / 2);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#textBox {
+    height: 300px;
     font-size: 32px;
     line-height: 48px;
     letter-spacing: 0em;
@@ -34,25 +47,11 @@ body {
     overflow: hidden;
     resize: none;
     flex-grow: 1;
-
-
-    background: #0a387146;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-top: -25px;
-}
-
-.main_container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background: transparent;
 }
 
 .result_box {
+    width: 400px;
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -60,7 +59,6 @@ body {
     background: white;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
-    max-width: 400px;
     height: 800px;
     align-self: center;
 }
@@ -71,12 +69,10 @@ body {
     align-items: center;
     justify-content: center;
     flex-grow: 1;
-    /*display: none;*/
+    display: none;
 }
 
 .result_box h5 {
-    max-width: 336px;
-    height: 58px;
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
@@ -87,7 +83,6 @@ body {
 }
 
 .result_box p {
-    max-width: 336px;
     height: 48px;
     font-style: normal;
     font-weight: 400;
@@ -100,20 +95,19 @@ body {
 
 #results {
     text-align: left;
-    margin-right: 30px;
     font-style: normal;
     font-size: 24px;
     line-height: 36px;
     color: #495057;
     flex-grow: 1;
-
+    margin-bottom: 10px;
+    /*display: none;*/
 }
 
 button {
-    display: block;
     padding-top: 21px;
     padding-bottom: 21px;
-    width: 325px;
+    width: 332px;
     font-size: 18px;
     line-height: 19px;
     border-radius: 20px;
@@ -125,7 +119,7 @@ button {
     color: #0A3871;
     background: #fff !important;
     transition: 0.1s box-shadow;
-    width: inherit;
+    width: auto;
     /*display: none;*/
 }
 
@@ -174,8 +168,95 @@ button {
     gap: 10px;
 }
 
-@media screen and (min-device-width: 770px) {
-    .container {
-        flex-direction: row;
+/* Responsive */
+
+@media screen and (max-width: 1490px) {
+    .main_container {
+        margin-top: 50px;
+        width: 600px;
     }
 }
+
+@media screen and (max-width: 1210px) {
+    .main_container {
+        width: 450px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .main_container {
+        margin-top: 40px;
+        width: 700px;
+    }
+
+    .result_box {
+        width: 700px;
+        height: auto;
+    }
+
+    .result_box p {
+        margin: 0;
+    }
+
+    .img_not_found {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width: 766px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .main_container {
+        width: 550px;
+    }
+
+    .result_box {
+        width: 550px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main_container {
+        width: 310px;
+    }
+
+    .encrypt_decrypt_buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .result_box {
+        width: 310px;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .encrypt_decrypt_buttons {
+        align-items: center;
+    }
+
+    #encryptButton,
+    #decryptButton {
+        width: 280px;
+    }
+}
+
+/* Responsive */

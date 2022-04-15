@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Encriptador/Desencriptador</title>
     <link rel="icon" href="/assets/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
     <script src="./js/script.js" defer></script>
   </head>
@@ -26,19 +32,16 @@
         </div>
       </div>
       <div class="result_box">
-        <div>
-          <p id="results">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci
-            montes, sit et diam risus scelerisque vitae est. Tortor maecenas
-            nunc ut laoreet. Eget diam mauris quam quisque ut eget fringilla sit
-            elit. Libero, sodales duis fames id diam feugiat aliquet non
-            egestas.
-          </p>
-        </div>
+        <span id="results">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci montes,
+          sit et diam risus scelerisque vitae est. Tortor maecenas nunc ut
+          laoreet. Eget diam mauris quam quisque ut eget fringilla sit elit.
+          Libero, sodales duis fames id diam feugiat aliquet non egestas.
+        </span>
         <div id="notFound">
-          <img src="./assets/find.png" alt="" />
+          <img class="img_not_found" src="./assets/find.png" alt="" />
           <h5>Ningún mensaje fue encontrado</h5>
-          <p>Ingresa el texto que desees encriptar o desencriptar</p>
+          <p>Ingresa el texto que deseas encriptar o desencriptar</p>
         </div>
         <button type="button" id="copyResultButton">Copiar</button>
       </div>
