@@ -35,18 +35,19 @@
             <p class="input_warning">Sólo letras minúsculas y sin acentos</p>
           </div>
           <div class="encrypt_decrypt_buttons">
-            <button type="button" id="encryptButton">Encriptar</button>
+            <button
+              type="button"
+              id="encryptButton"
+              onclick="checkEncryptText()"
+            >
+              Encriptar
+            </button>
             <button type="button" id="decryptButton">Desencriptar</button>
           </div>
         </div>
       </div>
       <div class="result_box">
-        <span id="results">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci montes,
-          sit et diam risus scelerisque vitae est. Tortor maecenas nunc ut
-          laoreet. Eget diam mauris quam quisque ut eget fringilla sit elit.
-          Libero, sodales duis fames id diam feugiat aliquet non egestas.
-        </span>
+        <span id="results"></span>
         <div id="notFound">
           <img class="img_not_found" src="./assets/find.png" alt="" />
           <h5>Ningún mensaje fue encontrado</h5>
