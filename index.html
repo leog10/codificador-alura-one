@@ -45,19 +45,22 @@
         </div>
       </div>
       <div class="result_box">
+        <h5 id="resultsTitle"></h5>
         <span id="results"></span>
         <div id="notFound">
           <img class="img_not_found" src="./assets/find.png" alt="" />
           <h5>Ningún mensaje fue encontrado</h5>
           <p>Ingresa el texto que deseas encriptar o desencriptar</p>
         </div>
-        <button type="button" id="copyResultButton">Copiar</button>
+        <button type="button" id="copyResultButton" onclick="copyText()">
+          Copiar
+        </button>
       </div>
     </div>
     <hr class="footer_hr" />
     <footer>
       <div>
-        <span>© <span id="year">2022</span> Leonardo Gilli</span>
+        <span>© <span id="year"></span> Leonardo Gilli</span>
       </div>
       <ul class="links">
         <li>

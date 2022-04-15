@@ -6,6 +6,8 @@ document.getElementById("year").innerHTML = actualYear;
 // Campo para mostrar el texto encriptado.
 let resultsArea = document.getElementById("results");
 
+let resultsTitle = document.getElementById("resultsTitle");
+
 // Elemento div mensaje no encontrado.
 let divNotFound = document.getElementById("notFound");
 
@@ -100,7 +102,8 @@ function encryptTextv2() {
   textBoxElement.value = "";
   document.getElementById("notFound").style.display = "none";
   resultsArea.style.display = "block";
-  resultsArea.innerHTML = `Texto encriptado con éxito:\n\n${textEncrypted}`;
+  resultsTitle.innerHTML = "Texto encriptado:";
+  resultsArea.innerHTML = textEncrypted;
   copyResultButton.style.display = "block";
 }
 
@@ -122,6 +125,13 @@ function decryptText() {
   textBoxElement.value = "";
   document.getElementById("notFound").style.display = "none";
   resultsArea.style.display = "block";
-  resultsArea.innerHTML = `Texto desencriptado con éxito:\n\n${textDecrypted}`;
+  resultsTitle.innerHTML = "Texto desencriptado:";
+  resultsArea.innerHTML = textDecrypted;
   copyResultButton.style.display = "block";
+}
+
+function copyText() {
+  let text = document.getElementById("results").innerHTML;
+  console.log(text);
+  navigator.clipboard.write(text);
 }
