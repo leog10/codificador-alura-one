@@ -3,6 +3,9 @@ const actualYear = new Date().getFullYear();
 // Asignar año actual al footer.
 document.getElementById("year").innerHTML = actualYear;
 
+//Focus en campo de texto al iniciar.
+document.getElementById("textBox").focus();
+
 // Campo para mostrar el texto encriptado.
 let resultsArea = document.getElementById("results");
 
